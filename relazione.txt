@@ -1,0 +1,18 @@
+Segmentazione della Rete
+La rete è divisa in diverse zone: Internet, DMZ, rete interna e rete client. La DMZ è quella parte in cui risiedono i server pubblici, come quelli HTTP e SMTP. Li ho tenuti isolati dalla rete interna per ridurre al minimo i rischi. Anche la rete interna è protetta con regole firewall per evitare accessi non autorizzati.
+
+Firewall Perimetrale
+Il firewall è stato impostato per filtrare il traffico in entrata e uscita:
+
+Traffico da Internet alla DMZ: Consento solo HTTP, HTTPS e SMTP.
+
+Traffico dalla rete interna verso la DMZ: Limitato solo ai servizi amministrativi necessari.
+
+VLAN e Isolamento
+Ogni segmento della rete è stato assegnato a una VLAN dedicata per garantire la separazione del traffico 
+Questa scelta rende più sicuro ogni singolo pezzo della rete, migliorandone l'isolamento logico.
+
+Riduzione della Superficie d'Attacco
+Nella DMZ, i dispositivi espongono solo i servizi essenziali, così si limitano le possibilità di attacco. La rete interna, invece, utilizza indirizzamenti privati, così da non essere mai direttamente raggiungibile dall'esterno.
+
+L'obiettivo è garantire la massima sicurezza senza sacrificare l'operatività della rete. In questo modo, possiamo proteggere i dati sensibili e mantenere operativi i servizi pubblici con il minor rischio possibile.
